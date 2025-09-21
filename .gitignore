@@ -44,3 +44,6 @@ Thumbs.db
 
 # Misc
 *.tmp
+
+Temporary Files
+/trash

@@ -94,3 +94,17 @@ model ScanResult {
   imgUrl     String
   createdAt  DateTime @default(now())
 }
+
+model InquiryMessage {
+  id        String    @id @default(uuid())
+  name      String
+  email     String
+  phone     String?
+  message   String
+  priority  String    @default("low")
+  status    String    @default("unread")
+  replied   Boolean   @default(false)
+  reply     String? // admin reply
+  repliedAt DateTime? // timestamp when admin replied
+  createdAt DateTime  @default(now())
+}

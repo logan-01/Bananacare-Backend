@@ -76,6 +76,22 @@ CREATE TABLE "public"."ScanResult" (
     CONSTRAINT "ScanResult_pkey" PRIMARY KEY ("id")
 );
 
+-- CreateTable
+CREATE TABLE "public"."ContactMessage" (
+    "id" TEXT NOT NULL,
+    "name" TEXT NOT NULL,
+    "email" TEXT NOT NULL,
+    "phone" TEXT,
+    "message" TEXT NOT NULL,
+    "priority" TEXT NOT NULL DEFAULT 'low',
+    "replied" BOOLEAN NOT NULL DEFAULT false,
+    "reply" TEXT,
+    "repliedAt" TIMESTAMP(3),
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+    CONSTRAINT "ContactMessage_pkey" PRIMARY KEY ("id")
+);
+
 -- CreateIndex
 CREATE UNIQUE INDEX "User_email_key" ON "public"."User"("email");
 

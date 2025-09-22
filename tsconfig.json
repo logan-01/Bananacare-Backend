@@ -11,5 +11,6 @@
     "paths": {
       "@/*": ["./*"] // '@' will now point to the root
     }
-  }
+  },
+  "include": ["src/**/*.ts", "src/types.d.ts"]
 }

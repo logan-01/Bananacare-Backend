@@ -3,6 +3,8 @@ import cors from "cors";
 import scanRouter from "./routes/scan";
 import uploadRouter from "./routes/upload";
 import inquiriesRouter from "./routes/inquires";
+import profileRouter from "./routes/profile";
+
 // import authConfig from "./lib/auth";
 // import { ExpressAuth } from "@auth/express";
 
@@ -27,6 +29,7 @@ app.get("/", (req, res) => {
 app.use("/scan", scanRouter);
 app.use("/upload", uploadRouter);
 app.use("/inquiries", inquiriesRouter);
+app.use("/profile", profileRouter);
 
 // app.set("trust proxy", true);
 // app.use("/auth", ExpressAuth(authConfig));

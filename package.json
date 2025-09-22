@@ -11,7 +11,8 @@
     "prisma:reset": "prisma migrate reset && prisma migrate dev",
     "prisma:studio": "prisma studio",
     "prisma:seed": "prisma db seed",
-    "prisma:generate": "npx prisma generate"
+    "prisma:generate": "npx prisma generate",
+    "firebase:quick": "tsx src/scripts/config-metadata-updater.ts quick"
   },
   "keywords": [],
   "author": "",
@@ -27,6 +28,7 @@
     "cloudinary": "^2.7.0",
     "cors": "^2.8.5",
     "express": "^5.1.0",
+    "firebase-admin": "^13.5.0",
     "multer": "^2.0.2",
     "uuid": "^11.1.0",
     "zod": "^4.1.5"

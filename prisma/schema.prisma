@@ -21,6 +21,7 @@ model User {
   password      String?
   emailVerified DateTime?
   image         String?
+  firebaseUID   String?         @unique // Firebase Auth UID
   accounts      Account[]
   sessions      Session[]
   // Optional for WebAuthn support

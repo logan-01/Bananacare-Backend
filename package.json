@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node dist/index.js",
-    "build": "echo 'Starting build...' && tsc --version && tsc && echo 'Build complete' && ls -la dist/",
-    "prebuild": "echo 'Current directory contents:' && ls -la && echo 'Source files:' && ls -la src/",
+    "build": "tsc",
     "dev": "nodemon --watch 'src/**/*.ts' --exec tsx src/index.ts",
     "postinstall": "prisma generate",
     "prisma:migrate": "npx prisma migrate dev",

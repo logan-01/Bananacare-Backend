@@ -15,6 +15,7 @@ app.use(
       "http://localhost:3000",
       "https://bananacare-frontend.vercel.app",
       "https://www.bananacare.site",
+      "https://backend-api-proxy.bananacare-backend-api-proxy.workers.dev/",
     ],
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
     credentials: true,
@@ -24,6 +25,16 @@ app.use(express.json());
 
 app.get("/", (req, res) => {
   res.send("Server is working!");
+});
+
+app.get("/health", (req, res) => {
+  res.status(200).json({
+    status: "ok",
+    service: process.env.SERVICE_NAME || "backend",
+    timestamp: new Date().toISOString(),
+    uptime: process.uptime(),
+    memory: process.memoryUsage(),
+  });
 });
 
 //API Routes

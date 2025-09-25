@@ -13,8 +13,8 @@
     "prisma:studio": "prisma studio",
     "prisma:seed": "prisma db seed",
     "prisma:generate": "npx prisma generate",
-    "prima-prod:deploy": "npx prisma migrate deploy --dotenv .env.production",
-    "prisma-prod:generate": "npx prisma generate --dotenv .env.production",
+    "prisma-prod:deploy": "npx prisma migrate deploy",
+    "prisma-prod:generate": "npx prisma generate",
     "firebase:quick": "tsx src/scripts/config-metadata-updater.ts quick"
   },
   "keywords": [],
@@ -41,6 +41,7 @@
     "@types/express": "^5.0.3",
     "@types/multer": "^2.0.0",
     "@types/node": "^24.3.0",
+    "cross-env": "^10.0.0",
     "nodemon": "^3.1.10",
     "prisma": "^6.16.2",
     "ts-node": "^10.9.2",
